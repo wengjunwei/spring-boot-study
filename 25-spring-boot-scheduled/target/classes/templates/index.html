@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf</title>
+</head>
+<body>
+	<span th:text="hello"></span>
+	<span th:text="${msg}"></span>
+	<br>
+	<input type="text" name="username" th:value="${msg}">
+	<span th:text="${#strings.isEmpty(msg)}"></span>
+	<br>
+	<span th:text="${#strings.contains(msg,'9')}"></span>
+	<span th:text="${#strings.contains(msg,'t')}"></span><br>
+	<span th:text="${#strings.startsWith(msg,'9')}"></span>
+	<span th:text="${#strings.startsWith(msg,'t')}"></span><br>
+	
+	<span th:text="${#strings.length(msg)}"></span>
+	<span th:text="${#strings.indexOf(msg,'h')}"></span><br>
+	
+	<span th:text="${#strings.substring(msg,7)}"></span>
+	<span th:text="${#strings.substring(msg,7,8)}"></span><br>
+	<span th:text="${#strings.toUpperCase(msg)}"></span>
+	<span th:text="${#strings.toLowerCase(msg)}"></span><br>
+	
+	<span th:text="${#dates.format(key)}"></span>
+	<span th:text="${#dates.format(key,'yyyy/MM/dd')}"></span><br>
+	
+	<span th:text="${#dates.year(key)}"></span>-
+	<span th:text="${#dates.month(key)}"></span>-
+	<span th:text="${#dates.day(key)}"></span>-
+	
+	
+</body>
+</html>

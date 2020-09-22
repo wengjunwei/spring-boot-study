@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<tr th:each="item:${map}">
+			<th th:text="${item}"></th>
+		</tr>
+	</table>
+	
+	<table border="1">
+		<tr>
+			<th>Key</th>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<tr th:each="item:${map}">
+			<th th:each="map:${item}" th:text=${map.key}></th>
+			<th th:each="map:${item}" th:text=${map.value.id}></th>
+			<th th:each="map:${item}" th:text=${map.value.name}></th>
+			<th th:each="map:${item}" th:text=${map.value.age}></th>
+		</tr>
+	</table>
+</body>
+</html>

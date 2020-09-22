@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	
+		<span th:if="${sex}=='男'">
+			这是男生
+		</span>
+		<span th:if="${sex}=='女'">
+			这是女生
+		</span>
+		<div th:switch="${id}">
+			<span th:case="1">这是id1</span>
+			<span th:case="2">这是id2</span>
+			<span th:case="3">这是id3</span>
+		</div>
+		
+</body>
+</html>
